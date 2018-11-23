@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp">
+
+    <ImageView
+        android:id="@+id/image_food"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:contentDescription="@string/food_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@android:drawable/screen_background_dark" />
+
+    <!-- TODO: wrap each text in cardview -->
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:text="@string/food_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/text_origin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_food" />
+
+    <TextView
+        android:id="@+id/text_origin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/food_origin"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintBottom_toTopOf="@+id/text_description"
+        app:layout_constraintEnd_toEndOf="@id/text_name"
+        app:layout_constraintStart_toStartOf="@id/text_name"
+        app:layout_constraintTop_toBottomOf="@+id/text_name" />
+
+    <TextView
+        android:id="@+id/text_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/food_description"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintBottom_toTopOf="@+id/text_ingredients"
+        app:layout_constraintEnd_toEndOf="@+id/text_origin"
+        app:layout_constraintStart_toStartOf="@+id/text_origin"
+        app:layout_constraintTop_toBottomOf="@+id/text_origin" />
+
+    <TextView
+        android:id="@+id/text_ingredients"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/food_ingredients"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/text_description"
+        app:layout_constraintStart_toStartOf="@+id/text_description"
+        app:layout_constraintTop_toBottomOf="@+id/text_description" />
+
+</android.support.constraint.ConstraintLayout>
