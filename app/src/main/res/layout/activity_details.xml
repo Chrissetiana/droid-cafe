@@ -4,13 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp">
+    android:layout_margin="16dp"
+    tools:context="DetailActivity">
 
     <ImageView
-        android:id="@+id/image_food"
+        android:id="@+id/image_android_logo"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:contentDescription="@string/food_image"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/android_image"
+        app:layout_constraintBottom_toTopOf="@+id/text_label_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -19,50 +22,133 @@
     <!-- TODO: wrap each text in cardview -->
 
     <TextView
-        android:id="@+id/text_name"
+        android:id="@+id/text_label_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:gravity="center"
-        android:text="@string/food_name"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toTopOf="@+id/text_origin"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/label_name"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toTopOf="@+id/text_label_api"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_food" />
+        app:layout_constraintTop_toBottomOf="@+id/image_android_logo" />
 
     <TextView
-        android:id="@+id/text_origin"
+        android:id="@+id/text_label_api"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/food_origin"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        app:layout_constraintBottom_toTopOf="@+id/text_description"
-        app:layout_constraintEnd_toEndOf="@id/text_name"
-        app:layout_constraintStart_toStartOf="@id/text_name"
-        app:layout_constraintTop_toBottomOf="@+id/text_name" />
+        android:layout_marginTop="8dp"
+        android:text="@string/label_api"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toTopOf="@+id/text_label_version"
+        app:layout_constraintEnd_toEndOf="@id/text_label_name"
+        app:layout_constraintStart_toStartOf="@id/text_label_name"
+        app:layout_constraintTop_toBottomOf="@+id/text_label_name" />
 
     <TextView
-        android:id="@+id/text_description"
+        android:id="@+id/text_label_version"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/food_description"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        app:layout_constraintBottom_toTopOf="@+id/text_ingredients"
-        app:layout_constraintEnd_toEndOf="@+id/text_origin"
-        app:layout_constraintStart_toStartOf="@+id/text_origin"
-        app:layout_constraintTop_toBottomOf="@+id/text_origin" />
+        android:layout_marginTop="8dp"
+        android:text="@string/label_version"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toTopOf="@+id/text_label_release"
+        app:layout_constraintEnd_toEndOf="@+id/text_label_api"
+        app:layout_constraintStart_toStartOf="@+id/text_label_api"
+        app:layout_constraintTop_toBottomOf="@+id/text_label_api" />
 
     <TextView
-        android:id="@+id/text_ingredients"
+        android:id="@+id/text_label_release"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/food_ingredients"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/text_description"
-        app:layout_constraintStart_toStartOf="@+id/text_description"
-        app:layout_constraintTop_toBottomOf="@+id/text_description" />
+        android:layout_marginTop="8dp"
+        android:text="@string/label_release"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/text_label_version"
+        app:layout_constraintStart_toStartOf="@+id/text_label_version"
+        app:layout_constraintTop_toBottomOf="@+id/text_label_version" />
+
+    <TextView
+        android:id="@+id/text_label_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/label_description"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@id/text_label_release"
+        app:layout_constraintStart_toStartOf="@id/text_label_release"
+        app:layout_constraintTop_toBottomOf="@+id/text_label_release" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="150dp" />
+
+    <TextView
+        android:id="@+id/text_android_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/android_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/text_label_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/text_label_name" />
+
+    <TextView
+        android:id="@+id/text_android_api"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/android_api"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/text_label_api"
+        app:layout_constraintEnd_toEndOf="@+id/text_android_name"
+        app:layout_constraintStart_toStartOf="@+id/text_android_name"
+        app:layout_constraintTop_toTopOf="@+id/text_label_api" />
+
+    <TextView
+        android:id="@+id/text_android_version"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/android_version"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/text_label_version"
+        app:layout_constraintEnd_toEndOf="@+id/text_android_api"
+        app:layout_constraintStart_toStartOf="@+id/text_android_api"
+        app:layout_constraintTop_toTopOf="@+id/text_label_version" />
+
+    <TextView
+        android:id="@+id/text_android_release"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/android_release"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/text_label_release"
+        app:layout_constraintEnd_toEndOf="@+id/text_android_version"
+        app:layout_constraintStart_toStartOf="@+id/text_android_version"
+        app:layout_constraintTop_toTopOf="@+id/text_label_release" />
+
+    <TextView
+        android:id="@+id/text_android_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/android_description"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/text_android_release"
+        app:layout_constraintStart_toStartOf="@+id/text_android_release"
+        app:layout_constraintTop_toTopOf="@+id/text_label_description" />
 
 </android.support.constraint.ConstraintLayout>

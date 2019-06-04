@@ -1,8 +1,16 @@
 <resources>
     <string name="app_name">Droid Cafe</string>
-    <string name="food_image">This is an image</string>
-    <string name="food_name">Club Sandwich</string>
-    <string name="food_origin">Place of origin:</string>
-    <string name="food_description">Description:</string>
-    <string name="food_ingredients">Ingredients:</string>
+
+    <string name="label_name">Codename</string>
+    <string name="label_description">Description</string>
+    <string name="label_api">API level</string>
+    <string name="label_version">Version No.</string>
+    <string name="label_release">Release date</string>
+
+    <string name="android_image">Android logo</string>
+    <string name="android_description">Cupcakes are muffin-like cakes, which mostly has a creamy hood.</string>
+    <string name="android_name">Cupcake</string>
+    <string name="android_api">3</string>
+    <string name="android_version">1.5</string>
+    <string name="android_release">2009–04–27</string>
 </resources>
