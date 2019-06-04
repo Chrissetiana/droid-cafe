@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Sandwich Club</string>
+    <string name="app_name">Droid Cafe</string>
     <string name="food_image">This is an image</string>
     <string name="food_name">Club Sandwich</string>
     <string name="food_origin">Place of origin:</string>
